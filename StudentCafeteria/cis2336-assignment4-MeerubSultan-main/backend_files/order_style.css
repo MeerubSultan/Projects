@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: rgba(234, 107, 107, 0.351);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+header {
+
+    height: 118px;
+    text-align: center;
+
+}
+
+nav {
+    background-color: rgba(113, 26, 26, 0.816);
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+}
+
+img {
+    height: 118px;
+}
+
+a {
+    color: rgb(225, 214, 214);
+    font-family: Arial;
+    /* text-decoration: none; */
+}
+
+nav a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+a:hover{
+    background-color: rgb(106, 29, 29);
+    color:rgb(224, 215, 215);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color:rgb(113, 26, 26);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+p {
+    font-weight: bold;
+}
+form {
+    width: 300px;
+}
+  
+.item {
+    margin-bottom: 10px;
+}
+  
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+  
+input {
+    width: 140px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgba(120, 15, 15, 0.674);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
+    width: 1550px;
+}

@@ -1,0 +1,85 @@
+
+img {
+    height: 118px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+
+    height: 118px;
+    text-align: center;
+
+}
+body {
+    background-color: rgba(234, 107, 107, 0.351);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+nav {
+    background-color: rgba(113, 26, 26, 0.816);
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+}
+a {
+    color: rgb(29, 32, 171);
+    font-family: Arial;
+    /* text-decoration: none; */
+}
+
+nav a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+a:hover{
+    background-color: whitesmoke;
+    color:black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h1 {
+    color:brown;
+    font-size: 40px;
+    text-decoration: underline;
+    text-align: center;
+
+}
+h2 {
+    color:brown;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+
+}
+.contact-info p {
+    font-size: 20px;
+    color:brown;
+    text-align: center;
+    font-weight: bold;
+}
+footer {
+    background-color: rgba(120, 15, 15, 0.674);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
+    width: 1550px;
+}

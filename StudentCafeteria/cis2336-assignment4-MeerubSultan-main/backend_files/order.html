@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="order_style.css" />
+</head>
+<body>
+    <header>
+        <img src="/images/UH logo.jpg" alt="Logo for UH Cafe">
+    </header>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about_personalbio.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact/Location</a>
+    </nav>
+
+   <h2> COUGAR CAFE ORDER FORM </h2>
+
+   <p>Enter Quantity Below:</p>
+   <form action="/process-order" method="post">
+
+    <div id="error-messages"></div>
+
+
+    <div class="item">
+        <label> Loaded Nachos: </label>
+        <input type="tel" id="q1" required>
+    </div>
+
+    <div class="toppings" id="toppings_q1" style="display: none;">
+        <label>Toppings:</label>
+        <input type="checkbox" name="topping" value="nomeat"> No Meat
+        <input type="checkbox" name="topping" value="extrameat"> Extra Meat
+        <input type="checkbox" name="topping" value="cheese"> Cheese
+        <input type="checkbox" name="topping" value="salsa"> Salsa
+        <input type="checkbox" name="topping" value="guacamole"> Guacamole
+        <input type="checkbox" name="topping" value="beans"> Beans
+        <input type="checkbox" name="topping" value="tomatoes"> Tomatoes
+        <input type="checkbox" name="topping" value="onion"> Onions
+        <input type="checkbox" name="topping" value="jalapenos"> Jalapenos
+        <input type="checkbox" name="topping" value="sourcream"> Sour Cream
+    </div>
+
+    <div class="item">
+        <label> Dinner Rolls:</label>
+        <input type="tel" id="q2" required>
+    </div>
+
+    <div class="item">
+        <label> Pizza: </label>
+        <input type="tel" id="q3" required>
+    </div>
+
+    <div class="toppings" id="toppings_q3" style="display: none;">
+        <label>Toppings:</label>
+        <input type="checkbox" name="topping" value="extracheese"> Extra Cheese
+        <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+        <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+        <input type="checkbox" name="topping" value="onions"> Onions
+        <input type="checkbox" name="topping" value="greenpeppers"> Green Peppers
+
+    </div>
+
+    <div class="item">
+        <label> Stir-Fry:</label>
+        <input type="tel" id="q4" required>
+    </div>
+
+    <div class="toppings" id="toppings_q4" style="display: none;">
+        <label>Toppings:</label>
+        <input type="checkbox" name="topping" value="nomeat"> No Meat
+        <input type="checkbox" name="topping" value="extrameat"> Extra Meat
+        <input type="checkbox" name="topping" value="greenbeans"> Green Beans
+        <input type="checkbox" name="topping" value="cabbage"> Cabbage
+        <input type="checkbox" name="topping" value="greenonion"> Green Onion
+        <input type="checkbox" name="topping" value="beansprouts"> Bean Sprouts
+        <input type="checkbox" name="topping" value="zucchini"> Zucchini
+        <input type="checkbox" name="topping" value="eggplant"> Eggplant
+        <input type="checkbox" name="topping" value="carrots"> Carrot
+    </div>
+
+    <div class="item">
+        <label> Cookies: </label>
+        <input type="tel" id="q5" required>
+    </div>
+
+    <div class="item">
+        <label> Brownies:</label>
+        <input type="tel" id="q6" required>
+    </div>
+
+    <div class="item">
+        <label> Water:</label>
+        <input type="tel" id="q7" required>
+    </div>
+
+    <div class="item">
+        <label> Fountain Drink:</label>
+        <input type="tel" id="q8" required>
+    </div>
+
+    <button type="submit"> Submit </button>
+
+    <div id="total-amount" style="display: none;"></div>
+
+    <script>
+        
+    let inputs = document.getElementsByTagName("input");
+    for (let input of inputs) {
+        input.addEventListener("focus", function() {
+            this.style.backgroundColor = "yellow";
+        });
+
+    input.addEventListener("blur", function() {
+        this.style.backgroundColor = "white";
+    });
+    }
+
+    document.getElementById("q1").addEventListener("blur", function() {
+    let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Loaded Nacho Quantity Error: Quantity must be a positive number between 0 and 5");
+    } else if (quantity > 0) {
+        document.getElementById("toppings_q1").style.display = "block";
+    } else {
+        document.getElementById("toppings_q1").style.display = "none";
+    }
+    });
+
+    document.getElementById("q2").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Soft Dinner Rolls Quantity Error: Quantity must be a positive number between 0 and 5");
+    }
+    });
+
+    document.getElementById("q3").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Pizza Quantity Error: Quantity must be a positive number between 0 and 5");
+    } else if (quantity > 0) {
+        document.getElementById("toppings_q3").style.display = "block";
+    } else {
+        document.getElementById("toppings_q3").style.display = "none";
+    }
+    });
+
+    document.getElementById("q4").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Stir-Fry Quantity Error: Quantity must be a positive number between 0 and 5");
+    } else if (quantity > 0) {
+        document.getElementById("toppings_q4").style.display = "block";
+    } else {
+        document.getElementById("toppings_q4").style.display = "none";
+    }
+    
+    });
+
+    document.getElementById("q5").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Chocolate Chip Cookie Quantity Error: Quantity must be a positive number between 0 and 5");
+    }
+    });
+
+    document.getElementById("q6").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Brownie Quantity Error: Quantity must be a positive number between 0 and 5");
+    }
+    });
+
+    document.getElementById("q7").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Water Quantity Error: Quantity must be a positive number between 0 and 5");
+    }
+    });
+
+    document.getElementById("q8").addEventListener("blur", function() {
+        let quantity = parseInt(this.value);
+    if(quantity < 0 || quantity >= 5) {
+        alert("Fountain Drink Quantity Error: Quantity must be a positive number between 0 and 5");
+    }
+    });
+
+    document.querySelector('button[type = "submit"]').addEventListener("click", function(e) {
+        e.preventDefault(); 
+        alert("Would you like to submit the form for processing now?")
+    });
+
+
+    </script>
+    
+    <footer>  <p> UH Sugarland Cafeteria - ORDER - Copyright 2024 ©</p> </footer>
+</body>
+</html>
